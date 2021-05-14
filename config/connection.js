@@ -7,7 +7,7 @@ let state = {
 module.exports = {
     connect: (done) => {
         const dbName = 'CoinedOneMachineTest'
-        const url = 'mongodb+srv://Harikrishnan_midhun:classAccess1234@classaccess-cluster1.9hild.mongodb.net/ca_db?retryWrites=true&w=majority'
+        const url = process.env.MONGODBURL
 
         mongoClient.connect(url,(err,data)=>{
             if(err){
